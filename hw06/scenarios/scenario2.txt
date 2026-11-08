@@ -1,0 +1,6 @@
+# Valid scenario test file for hw06
+start 1700000000
+
+0 23.5 50.0 0x01
+5 25.0 55.0 0x03
+10 28.0 60.0 0x07
