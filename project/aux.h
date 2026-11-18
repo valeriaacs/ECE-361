@@ -17,6 +17,7 @@
 #include <stdint.h>
 #include "fsm.h"
 #include "store.h"
+#include "iom361_r4.h"
 
 /* Opaque auxiliary hash table type (S4) */
 typedef struct aux aux_t;
@@ -72,11 +73,5 @@ size_t aux_total_count(const aux_t *table);
  * aux_destroy() - frees all chains, buckets, and the table itself.
  */
 void aux_destroy(aux_t *table);
-
-/**
- * build_rgb_reg() - packs enable bit and 8-bit R, G, B channels into
- * the 32-bit value expected by iom361's RGB_LED_REG.
- */
-uint32_t build_rgb_reg(int enable, uint8_t r, uint8_t g, uint8_t b);
 
 #endif /* AUX_H */
